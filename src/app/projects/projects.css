@@ -1,0 +1,100 @@
+/* ==============================
+   Projects Page Styles
+   ============================== */
+
+.projects-hero {
+  padding-top: clamp(6rem, 10vw, 8rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+  background: linear-gradient(160deg, #FAFAFA 0%, #ECFDF5 50%, #FAFAFA 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-hero::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 280px;
+  height: 280px;
+  background: var(--xinity-teal);
+  opacity: 0.12;
+  filter: blur(60px);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-slow 15s infinite ease-in-out;
+}
+
+.projects-hero-content {
+  max-width: 660px;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--xinity-teal);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.projects-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  color: var(--xinity-black);
+}
+
+.projects-description {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: var(--xinity-gray);
+  line-height: 1.7;
+}
+
+/* Category Filters */
+.projects-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: white;
+  color: var(--xinity-gray);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.filter-btn:hover {
+  background: rgba(0, 0, 0, 0.02);
+  color: var(--xinity-black);
+}
+
+.filter-btn-active {
+  background: var(--xinity-black) !important;
+  color: white !important;
+  border-color: var(--xinity-black) !important;
+}
+
+.projects-empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: #fafafa;
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(0,0,0,0.1);
+  color: var(--xinity-gray);
+  max-width: 400px;
+  margin: 2rem auto;
+}

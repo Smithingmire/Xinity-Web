@@ -1,0 +1,273 @@
+/* ==============================
+   Team Page Styles
+   ============================== */
+
+.team-hero {
+  padding-top: clamp(6rem, 10vw, 8rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+  background: linear-gradient(160deg, #FAFAFA 0%, #F5F3FF 50%, #FAFAFA 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-hero::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 280px;
+  height: 280px;
+  background: var(--xinity-purple);
+  opacity: 0.1;
+  filter: blur(60px);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-slow 15s infinite ease-in-out;
+}
+
+.team-hero-content {
+  max-width: 660px;
+  position: relative;
+  z-index: 1;
+}
+
+.team-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--xinity-purple);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.team-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  color: var(--xinity-black);
+}
+
+.team-description {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: var(--xinity-gray);
+  line-height: 1.7;
+}
+
+/* Category Filters */
+.team-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-card {
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+}
+
+.team-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-6px);
+}
+
+.team-card-header {
+  padding: 2.25rem 1.5rem 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: background 300ms ease;
+}
+
+.team-card:hover .team-card-header {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.team-card-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  font-family: var(--font-display);
+  margin-bottom: 1rem;
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-card:hover .team-card-avatar {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.team-card-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--xinity-black);
+  margin: 0 0 0.25rem 0;
+  line-height: 1.2;
+}
+
+.team-card-role {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.team-card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card-bio {
+  font-size: 0.88rem;
+  color: var(--xinity-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.team-card-socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.team-card-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--xinity-black);
+  transition: all 200ms ease;
+}
+
+.team-card-social-link:hover {
+  background: var(--hover-color, var(--xinity-yellow));
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Empty State */
+.team-empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: #fafafa;
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(0,0,0,0.1);
+  color: var(--xinity-gray);
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+/* Core Team Join CTA Section */
+.team-cta-section {
+  padding-block: var(--section-padding);
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-cta-card {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--xinity-purple) 0%, #6001c9 100%);
+  color: #ffffff;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 45px rgba(127, 0, 255, 0.15);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Geometric details */
+.team-cta-card::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  width: 180px;
+  height: 180px;
+  background: var(--xinity-orange);
+  opacity: 0.15;
+  filter: blur(40px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.team-cta-card::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  width: 220px;
+  height: 220px;
+  background: var(--xinity-teal);
+  opacity: 0.15;
+  filter: blur(50px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.team-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.team-cta-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.team-cta-btn {
+  position: relative;
+  z-index: 1;
+}
+

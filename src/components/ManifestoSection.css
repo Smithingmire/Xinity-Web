@@ -1,0 +1,119 @@
+/* ==============================
+   Manifesto Section Styles
+   ============================== */
+
+.manifesto-section {
+  padding-block: var(--section-padding);
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.manifesto-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background floating shapes */
+.manifesto-shape-1 {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  width: 150px;
+  height: 150px;
+  background: var(--xinity-orange);
+  opacity: 0.12;
+  filter: blur(50px);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-slow 16s infinite ease-in-out;
+}
+
+.manifesto-shape-2 {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 180px;
+  height: 180px;
+  background: var(--xinity-teal);
+  opacity: 0.1;
+  filter: blur(60px);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-medium 22s infinite ease-in-out;
+}
+
+.manifesto-card {
+  width: 100%;
+  max-width: 960px;
+  background: linear-gradient(135deg, var(--xinity-teal) 0%, #00a38c 100%);
+  color: #ffffff;
+  padding: clamp(2rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem);
+  position: relative;
+  border-radius: var(--radius-lg);
+  box-shadow: 0px 30px 60px -15px rgba(0, 191, 165, 0.25);
+  overflow: hidden;
+}
+
+/* Hard color blocks in the corner */
+.manifesto-decor-blocks {
+  position: absolute;
+  top: 24px;
+  right: 40px;
+  display: flex;
+  gap: 6px;
+}
+
+.decor-block-yellow {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--xinity-yellow);
+}
+
+.decor-block-white {
+  width: 12px;
+  height: 4px;
+  border-radius: 2px;
+  background: #ffffff;
+}
+
+.decor-block-orange {
+  width: 6px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--xinity-orange);
+}
+
+.manifesto-eyebrow {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  background: var(--xinity-yellow);
+  color: #000000;
+  padding: 6px 16px;
+  border-radius: 9999px;
+}
+
+.manifesto-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.manifesto-body-text {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.65;
+  color: #e0f2f1;
+  margin-bottom: 2.5rem;
+  max-width: 760px;
+}
