@@ -41,7 +41,7 @@ export default function ProjectsShowcase({ limit, showHeading = true }: Props) {
               Real products built by real builders during Xinity hackathons.
               Not demos — working software.
             </p>
-            <p>We're in the process of building Xinity - but we also love shipping side projects, open source, and things that just make life easier for other developers. If you’re working on something you’re proud of, we’d love to feature it here.</p>
+            <p>We&apos;re in the process of building Xinity but we also love shipping side projects,open source,and things that just make life easier for other developers.If you&apos;re working on something you&apos;re proud of,we&apos;d love to feature it here.</p>
           </motion.div>
         )}
 
